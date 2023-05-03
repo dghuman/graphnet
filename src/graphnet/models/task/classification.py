@@ -21,6 +21,8 @@ class BinaryClassificationTask(Task):
     """Performs binary classification."""
 
     # Requires one feature, logit for being signal class.
+    default_target_labels = ""
+    default_prediction_labels = ""
     nb_inputs = 1
 
     def _forward(self, x: Tensor) -> Tensor:
